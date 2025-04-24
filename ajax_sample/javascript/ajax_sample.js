@@ -10,13 +10,13 @@ let loadData = async () => {
     
     
     length = data.length
-    num = clicks%length
+    num = clicks++%length
     
     title.text(data[num]["title"]);
     content.text(data[num]["content"])
     video.attr("src", data[num]["url"]);
-    console.log(clicks, num)
-    ++clicks
+    
+    
 }
 
 button.on("click", loadData)
