@@ -1,0 +1,9 @@
+<h1>Modify post</h1>
+<%= render "form", post: @post%>
+<%= link_to "Cancel", @post%>
+
+<%if !@errors.eql? nil%>
+   <% @errors.each do |error|%>
+    <div><%=error%></div>
+   <%end%>
+<%end%>

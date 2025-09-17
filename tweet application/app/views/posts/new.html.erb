@@ -1,0 +1,9 @@
+<h1>Create a new post</h1>
+<%= render "form", post: @post%>
+<%= link_to "Cancel", posts_path%>
+
+<%if !@errors.eql? nil%>
+   <% @errors.each do |error|%>
+    <div class="error"><%=error%></div>
+   <%end%>
+<%end%>

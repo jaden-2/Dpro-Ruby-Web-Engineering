@@ -1,0 +1,17 @@
+<div class="create_post">
+    <%= form_with model: @post do |form|%>
+        <div>
+            <%= form.label :creator%>
+            <%= form.text_field :creator%>
+        </div>
+
+        <div>
+            <%= form.label :content%>
+            <%= form.textarea :content%>
+        </div>
+
+        <div>
+            <%= form.submit "Post"%>
+        </div>
+    <%end%>
+</div>

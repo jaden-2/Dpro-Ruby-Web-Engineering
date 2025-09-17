@@ -1,0 +1,14 @@
+<h1>Twitter Application</h1>
+
+<div class= "posts">
+    <div>
+        Share your thoughts
+        <p><%= link_to "Create new post", new_post_path%></p>
+    </div>
+    
+    <% @posts.each do |post|%>
+        <p>Posted by: <%=post.creator%></p>
+        <p><%= post.content%></p>
+        <%= link_to "View post", post%>
+    <%end%>
+</div>
